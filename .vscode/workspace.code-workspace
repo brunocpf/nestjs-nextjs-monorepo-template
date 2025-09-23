@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "..",
+    },
+    {
+      "path": "../apps/api",
+      "name": "Workspace - API",
+    },
+    {
+      "path": "../apps/web",
+      "name": "Workspace - Web",
+    },
+  ],
+  "settings": {
+    "tailwindCSS.experimental.configFile": "packages/ui/src/styles/globals.css",
+    "jest.disabledWorkspaceFolders": ["../apps/api"],
+  },
+}

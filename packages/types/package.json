@@ -1,0 +1,49 @@
+{
+  "name": "@workspace/types",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "build": "tsc -b -v",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit"
+  },
+  "files": [
+    "./dist/**"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  },
+  "exports": {
+    "./contracts": {
+      "import": "./dist/contracts/index.js",
+      "require": "./dist/contracts/index.js"
+    },
+    "./contracts/*": {
+      "import": "./dist/contracts/*.js",
+      "require": "./dist/contracts/*.js"
+    },
+    "./*": {
+      "import": "./dist/*.js",
+      "require": "./dist/*.js"
+    }
+  },
+  "dependencies": {
+    "@orpc/contract": "^1.8.9",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "@workspace/eslint-config": "*",
+    "@workspace/typescript-config": "*",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
