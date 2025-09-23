@@ -9,6 +9,11 @@ import { Env } from "@/env.schema";
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     bodyParser: false,
+    cors: {
+      allowedHeaders: ["content-type"],
+      origin: "http://localhost:3000",
+      credentials: true,
+    },
   });
   const configService = app.get(ConfigService<Env, true>);
 
