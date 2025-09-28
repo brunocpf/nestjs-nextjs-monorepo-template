@@ -11,7 +11,7 @@ export class AppController {
 
   @Implement(apiV1.hello.get)
   getHello() {
-    return implement(apiV1.hello.get).handler(({}) => {
+    return implement(apiV1.hello.get).handler(() => {
       return this.appService.getHello();
     });
   }
