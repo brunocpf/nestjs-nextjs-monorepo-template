@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,23 +12,27 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@orpc/openapi-client": "^1.8.9",
+    "@orpc/openapi-client": "^1.9.1",
     "@orpc/react-query": "^1.8.9",
-    "@tanstack/react-query": "^5.90.1",
+    "@tanstack/react-query": "^5.90.2",
     "@workspace/types": "*",
     "@workspace/ui": "*",
     "lucide-react": "^0.544.0",
-    "next": "^15.5.3",
+    "next": "15.5.4",
     "next-themes": "^0.4.6",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
   },
   "devDependencies": {
     "@types/node": "^24.5.2",
-    "@types/react": "19.1.13",
-    "@types/react-dom": "^19.1.9",
+    "@types/react": "19.1.15",
+    "@types/react-dom": "19.1.9",
     "@workspace/eslint-config": "*",
     "@workspace/typescript-config": "*",
     "typescript": "^5.9.2"
+  },
+  "overrides": {
+    "@types/react": "19.1.15",
+    "@types/react-dom": "19.1.9"
   }
 }
