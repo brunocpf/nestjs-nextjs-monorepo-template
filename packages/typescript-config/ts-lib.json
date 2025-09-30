@@ -1,21 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "NestJS",
-  "extends": "./base.json",
-  "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "incremental": true,
-    "module": "nodenext",
-    "moduleResolution": "Node16",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "removeComments": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "strictBindCallApply": true
-  }
+  "extends": "./base.json"
 }
