@@ -14,6 +14,5 @@
   ],
   "settings": {
     "tailwindCSS.experimental.configFile": "packages/ui/src/styles/globals.css",
-    "jest.disabledWorkspaceFolders": ["../apps/api"],
   },
 }
