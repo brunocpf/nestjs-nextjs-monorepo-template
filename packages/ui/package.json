@@ -27,6 +27,7 @@
     "@types/react-dom": "^19.1.9",
     "@workspace/eslint-config": "*",
     "@workspace/typescript-config": "*",
+    "@workspace/lint-staged": "*",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2"
   },
