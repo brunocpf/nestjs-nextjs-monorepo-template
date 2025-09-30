@@ -4,6 +4,6 @@ export const config = {
   collectCoverage: true,
   coverageDirectory: "coverage",
   coverageProvider: "v8",
-  moduleFileExtensions: ["js", "ts", "json"],
+  moduleFileExtensions: ["js", "ts", "mjs", "json"],
   testEnvironment: "jsdom",
 } as const satisfies Config;

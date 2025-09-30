@@ -1,12 +1,23 @@
+import { FlatCompat } from "@eslint/eslintrc";
 import js from "@eslint/js";
 import pluginNext from "@next/eslint-plugin-next";
 import eslintConfigPrettier from "eslint-config-prettier";
+import checkFile from "eslint-plugin-check-file";
 import pluginReact from "eslint-plugin-react";
 import pluginReactHooks from "eslint-plugin-react-hooks";
 import globals from "globals";
+import { dirname } from "path";
 import tseslint from "typescript-eslint";
+import { fileURLToPath } from "url";
 
 import { config as baseConfig } from "./base.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
 
 /**
  * A custom ESLint configuration for libraries that use Next.js.
@@ -48,13 +59,24 @@ export const config = [
       "react/prop-types": "off",
     },
   },
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
-    ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "next-env.d.ts",
-    ],
+    plugins: {
+      "check-file": checkFile,
+    },
+    rules: {
+      "check-file/filename-naming-convention": [
+        "error",
+        {
+          "src/**/*.{ts,tsx}": "KEBAB_CASE",
+        },
+      ],
+      "check-file/folder-naming-convention": [
+        "error",
+        {
+          "src/**/": "KEBAB_CASE",
+        },
+      ],
+    },
   },
 ];
