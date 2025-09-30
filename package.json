@@ -22,7 +22,7 @@
     "turbo": "^2.5.8",
     "typescript": "5.9.2"
   },
-  "packageManager": "npm@11.6.0",
+  "packageManager": "npm@11.6.1",
   "engines": {
     "node": ">=20"
   },
