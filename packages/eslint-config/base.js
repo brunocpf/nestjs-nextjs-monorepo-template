@@ -27,6 +27,11 @@ export const config = [
     },
   },
   {
-    ignores: ["dist/**", "eslint.config.js"],
+    ignores: [
+      "dist/**",
+      "eslint.config.mjs",
+      "lint-staged.config.mjs",
+      "postcss.config.mjs",
+    ],
   },
 ];

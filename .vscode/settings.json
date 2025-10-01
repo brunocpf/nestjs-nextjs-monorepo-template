@@ -1,3 +1,4 @@
 {
-  "jest.enable": false
+  "jest.enable": false,
+  "tailwindCSS.experimental.configFile": "packages/ui/src/styles/globals.css"
 }
