@@ -35,16 +35,16 @@
     }
   },
   "dependencies": {
-    "@orpc/contract": "^1.9.1",
-    "zod": "^4.1.11"
+    "@orpc/contract": "^1.10.2",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2",
+    "@types/node": "^24.9.2",
     "@workspace/eslint-config": "*",
     "@workspace/typescript-config": "*",
     "@workspace/lint-staged": "*",
     "ts-loader": "^9.5.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }
