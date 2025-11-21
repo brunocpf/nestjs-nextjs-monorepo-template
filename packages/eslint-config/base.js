@@ -1,15 +1,11 @@
+// @ts-check
 import js from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
-import onlyWarn from "eslint-plugin-only-warn";
 import turboPlugin from "eslint-plugin-turbo";
+import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
 
-/**
- * A shared ESLint configuration for the repository.
- *
- * @type {import("eslint").Linter.Config}
- * */
-export const config = [
+export const config = defineConfig([
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
@@ -22,11 +18,6 @@ export const config = [
     },
   },
   {
-    plugins: {
-      onlyWarn,
-    },
-  },
-  {
     ignores: [
       "dist/**",
       "eslint.config.mjs",
@@ -34,4 +25,4 @@ export const config = [
       "postcss.config.mjs",
     ],
   },
-];
+]);
