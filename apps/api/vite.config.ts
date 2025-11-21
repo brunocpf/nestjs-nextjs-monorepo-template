@@ -12,7 +12,6 @@ export default defineConfig({
     testTimeout: 120000,
     coverage: {
       enabled: false,
-      all: true,
       provider: "istanbul",
       include: ["src/**"],
       reporter: ["json-summary", "html"],
