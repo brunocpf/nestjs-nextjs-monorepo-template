@@ -35,11 +35,11 @@
     }
   },
   "dependencies": {
-    "@orpc/contract": "^1.11.3",
-    "zod": "^4.1.12"
+    "@orpc/contract": "^1.12.2",
+    "zod": "^4.1.13"
   },
   "devDependencies": {
-    "@types/node": "^24.10.1",
+    "@types/node": "^24.10.2",
     "@workspace/eslint-config": "*",
     "@workspace/typescript-config": "*",
     "@workspace/lint-staged": "*",
